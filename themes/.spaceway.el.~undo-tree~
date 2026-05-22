@@ -1,8 +1,0 @@
-(undo-tree-save-format-version . 1)
-"a828ddd199cc1e4b133234c0db47ed046ae2620f"
-[nil nil nil nil (25467 1090 828657 198000) 0 nil]
-([nil nil ((nil rear-nonsticky nil 19124 . 19125) (nil fontified nil 1 . 19125) (1 . 19125) (t 25467 1085 71981 339000)) nil (25467 1090 828655 735000) 0 nil])
-([nil nil ((19125 . 19126)) nil (25467 1090 828651 166000) 0 nil])
-([nil nil ((#(" " 0 1 (fontified t)) . -531) (undo-tree-id12 . -1) (undo-tree-id13 . -1) (undo-tree-id14 . -1) 532 (t 25980 61201 311055 97000)) nil (27150 25003 886365 437000) 0 nil])
-([nil current ((#(";" 0 1 (face font-lock-comment-delimiter-face fontified t)) . -531) (undo-tree-id0 . -1) (#(";" 0 1 (face font-lock-comment-delimiter-face fontified t)) . -532) (undo-tree-id1 . -1) (#(" " 0 1 (face font-lock-comment-delimiter-face fontified t)) . -533) (undo-tree-id2 . -1) (#("\"" 0 1 (face font-lock-comment-face fontified t)) . -534) (undo-tree-id3 . -1) (#("#" 0 1 (face font-lock-comment-face fontified t)) . -535) (undo-tree-id4 . -1) (#("1" 0 1 (face font-lock-comment-face fontified t)) . -536) (undo-tree-id5 . -1) (#("6" 0 1 (face font-lock-comment-face fontified t)) . -537) (undo-tree-id6 . -1) (#("1" 0 1 (face font-lock-comment-face fontified t)) . -538) (undo-tree-id7 . -1) (#("A" 0 1 (face font-lock-comment-face fontified t)) . -539) (undo-tree-id8 . -1) (#("1" 0 1 (face font-lock-comment-face fontified t)) . -540) (undo-tree-id9 . -1) (#("F" 0 1 (face font-lock-comment-face fontified t)) . -541) (undo-tree-id10 . -1) (#("\"" 0 1 (face font-lock-comment-face fontified t)) . -542) (undo-tree-id11 . -1) 543) nil (27150 25003 886354 450000) 0 nil])
-nil
