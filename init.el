@@ -10,6 +10,21 @@
 (global-auto-revert-mode 1)
 (set-default-coding-systems 'utf-8)
 
+(require 'backup-dir)
+(make-variable-buffer-local 'backup-inhibited)
+(setq bkup-backup-directory-info
+      '((t "~/.config/emacs/backups" ok-create full-path prepend-name)))
+(setq delete-old-versions t
+      kept-old-versions 1
+      kept-new-versions 3
+      version-control t)
+(defun make-backup-file-name (FILE)
+  (let ((dirname (concat "~/.config/emacs/backups"
+                         (format-time-string "%y/%m/%d/"))))
+    (if (not (file-exists-p dirname))
+        (make-directory dirname t))
+    (concat dirname (file-name-nondirectory FILE))))
+
 ;; system clipboard
 ;; (require 'xclip)
 ;; (xclip mode 1)
@@ -321,27 +336,8 @@ folder, otherwise delete a word"
   :config
   (which-key-mode))
 
-;; Projectile
-(use-package projectile
-	:straight t
-  :diminish projectile-mode
-  :config (projectile-mode)
-  :custom ((projectile-completion-system 'ivy))
-  :bind-keymap
-  ("C-c p" . projectile-command-map)
-  :init
-  ;; NOTE: Set this to the folder where you keep your Git repos!
-  (when (file-directory-p "~/projects/")
-    (setq projectile-project-search-path '("~/projects/")))
-  (setq projectile-switch-project-action #'projectile-dired))
-
-(use-package counsel-projectile
-	:straight t
-  :after projectile
-  :config (counsel-projectile-mode))
-
 ;; unicode glyph support
-(defun dw/replace-unicode-font-mapping (block-name old-font new-font)
+defun dw/replace-unicode-font-mapping (block-name old-font new-font)
   (let* ((block-idx (cl-position-if
                          (lambda (i) (string-equal (car i) block-name))
                          unicode-fonts-block-font-mapping))
